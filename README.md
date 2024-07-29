@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Campaign Management System
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project includes React components designed for managing campaigns in a Next.js application. The components cover campaign creation, management, and interaction functionalities. This README provides an overview of the code, the campaign and call handling process, and steps for setting up and running the development environment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Setting Up the Development Environment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow these steps to set up the development environment and run the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the Repository**
 
-## Learn More
+   Clone the project repository from GitHub:
+   ```bash
+   git clone https://github.com/Swapnendu003/Toing.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Navigate to the Project Directory**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Move into the project directory:
+   ```bash
+   cd toing
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Install Dependencies**
 
-## Deploy on Vercel
+   Install the necessary dependencies using npm:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Start the Development Server**
+
+   Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+   Open `http://localhost:3000` in your browser to view the application.
+
+## 📂 Code Explanation
+
+### AddCampaignForm Component
+
+- **State Management**: Uses React state hooks to manage form data.
+- **API Integration**: Fetches voice and language options from the API.
+- **Form Validation**: Includes validation for required fields and data types.
+- **Form Submission**: Handles multi-step form submission and data processing.
+
+### CampaignTable Component
+
+- **Data Management**: Retrieves campaign data from local storage and displays it in a table format.
+- **CSV Upload**: Parses CSV files and integrates new contacts into the campaign.
+- **Call Handling**: Includes functionality for making calls and viewing call logs.
+
+## 📈 Campaign and Call Handling Process
+
+1. **Creating a Campaign**
+
+   - **Input Data**: Users provide campaign details including script, purpose, and tone.
+   - **Upload Knowledge Base**: Users can upload a PDF or enter a URL.
+   - **Define Schedule**: Set the availability hours for the campaign.
+   - **Submit Form**: On submission, campaign data is sent to the server and saved in local storage.
+
+2. **Managing Campaigns**
+
+   - **View Campaigns**: Users can view details of each campaign.
+   - **Make Calls**: Initiate calls based on campaign details.
+   - **Upload Contacts**: Add new contacts via CSV upload.
+
+## 🚀 Running the Project
+
+After setting up the environment and starting the development server, you can:
+
+- **Access the Application**: Open `http://localhost:3000` to interact with the `AddCampaignForm` and `CampaignTable` components.
+- **Test Functionality**: Create new campaigns, manage existing ones, and upload contacts to ensure all features work as expected.
+
+
+
+
