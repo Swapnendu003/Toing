@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CampaignFormStep from './CampaignFormStep';
@@ -75,7 +76,7 @@ const AddCampaignForm: React.FC<AddCampaignFormProps> = ({ onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate form fields
+
     if (formData.script.length < 200) {
       toast.error('The script must have at least 200 characters.');
       return;
@@ -97,7 +98,7 @@ const AddCampaignForm: React.FC<AddCampaignFormProps> = ({ onClose }) => {
       });
 
       if (response.data.status) {
-        // Save campaign to local storage with full details and campaign ID
+                                                             
         const campaignId = response.data.result.campaignId;
         const newCampaign = { ...formData, campaignId };
         const existingCampaigns = JSON.parse(localStorage.getItem('campaigns') || '[]');

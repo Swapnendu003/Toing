@@ -4,7 +4,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 
 //import MainPageCards from "@/components/cards/mainPageCards";
-import { Main } from "next/document";
+//import { Main } from "next/document";
 import HomePage from "../cards/mainPageCards";
 //import Campaigns from "./campaignHandler";
 import CampaignsTable from "./CampaignsTable";
